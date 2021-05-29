@@ -18,7 +18,7 @@ gem 'georuby', '2.0'
 gem "google-cloud-storage"
 gem 'grape'
 gem 'grape-entity'
-gem 'grape-swagger', '~> 1.3.1'
+gem 'grape-swagger', '~> 1.4.0'
 gem 'grape-swagger-entity', '0.5.1'
 gem 'grape-swagger-rails'
 gem 'grape-swagger-ui'
@@ -28,7 +28,7 @@ gem 'impressionist'
 gem 'jbuilder', '~> 2.11'
 gem 'jquery-rails'
 gem 'mocha', '~> 1.12'
-gem 'mimemagic', '~> 0.3.8'
+gem 'mimemagic', '~> 0.3.10'
 gem 'mustermann' , '1.1.1'
 gem 'omniauth', '~> 1.9'
 gem 'omniauth-facebook', '~> 8.0'
@@ -51,7 +51,7 @@ gem 'rdiscount', '~> 2.2'
 gem 'react-rails'
 gem "recaptcha", require: "recaptcha/rails"
 gem 'responders', '~> 3.0'
-gem 'rubocop', '~> 1.11.0', require: false
+gem 'rubocop', '~> 1.15.0', require: false
 gem "ruby-openid", :require => "openid"
 gem 'sanitize'
 gem 'sentry-raven'
@@ -105,7 +105,7 @@ gem 'grape-rails-cache'
 group :development do
   gem 'byebug', platform: :mri
   gem "letter_opener"
-  gem 'listen', '~> 3.5.0'
+  gem 'listen', '~> 3.5.1'
   gem "nifty-generators"
   gem 'web-console', '>= 3.3.0'
 end
@@ -121,7 +121,7 @@ group :test, :development do
   gem 'minitest-reporters', '~> 1.4.3'
   gem 'openssl', '~> 2.2.0'
   gem 'phantomjs'
-  gem 'puma', '~> 5.2'
+  gem 'puma', '~> 5.3'
   gem 'rails-perftest'
   gem 'rake', '~> 13.0.3'
   gem 'rest-client'
@@ -132,7 +132,7 @@ group :test, :development do
   gem 'timecop'
   gem 'pry-rails'
   gem 'action-cable-testing'
-  gem "webmock", "~> 3.12"
+  gem "webmock", "~> 3.13"
 end
 
 group :production do

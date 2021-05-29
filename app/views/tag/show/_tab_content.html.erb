@@ -7,8 +7,8 @@
   <% if @node_type == "note" %>
     <div class="tab-pane active" id="notes">
       <% if @notes.nil? || @notes.length == 0 %>
-        <p><%= raw translation('tag.show.no_results_found', tag: params[:id]) %>:</p>
-        <p><a href="/search/<%= params[:id] %>">Search for "<%= params[:id] %>"</a></p>
+      <p><%= raw translation('tag.show.no_notes_results_found') %></p>
+      <p>Or try searching: <a href="/search/<%= params[:id] %>"><%= params[:id] %></a></p>
       <% else %>
         <%= render partial: "notes/notes", locals: { tagname: params[:id] } %>
       <% end %>
@@ -18,13 +18,16 @@
   <% if @node_type == "questions" %>
     <div class="tab-pane active" id="questions">
       <div id="questions-tab">
-
-        <div class="tab-content">
-          <div id="asked-content">
-            <%= render partial: "questions/new_question" %>
+        <% if @questions.nil? || @questions.length == 0 %>
+          <p><%= raw translation('tag.show.no_questions_results_found') %></p>
+          <p>Or try searching: <a href="/search/<%= params[:id] %>"><%= params[:id] %></a></p>
+        <% else %>
+          <div class="tab-content">
+            <div id="asked-content">
+              <%= render partial: "questions/new_question" %>
+            </div>
           </div>
-        </div>
-
+        <% end %>
       </div>
     </div>
   <% end %>
@@ -32,8 +35,8 @@
   <% if @node_type == "wiki" %>
     <div class="tab-pane active" id="wikis">
       <% if @wikis.nil? || @wikis.length == 0 %>
-        <p><%= raw translation('tag.show.no_results_found', tag: params[:id]) %>:</p>
-        <p><a href="/search/<%= params[:id] %>">Search for "<%= params[:id] %>"</a></p>
+        <p><%= raw translation('tag.show.no_wikis_results_found') %></p>
+        <p>Or try searching: <a href="/search/<%= params[:id] %>"><%= params[:id] %></a></p>
       <% else %>
       <%= render partial: "wiki/wikis" %>
       <% end %>
