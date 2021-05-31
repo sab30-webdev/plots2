@@ -112,7 +112,14 @@
   }
 
  /* Small devices */
-  @media (min-width: 280px) {
+  @media (min-width: 280px) and (max-device-width : 720px) {
+    .card-responsive {
+      margin-bottom: 21px;
+    }
+  }
+
+   /* Tablets */
+  @media (min-width: 768px) and (max-device-width : 1024px) {
     .card-responsive {
       margin-bottom: 21px;
       margin-right: 48px;
